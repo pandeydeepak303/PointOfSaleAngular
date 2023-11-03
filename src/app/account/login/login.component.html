@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">   
+</head>
+<body>
+    <section class="myform-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-area login-form">
+                        <div class="form-input">
+                            <h2>Login</h2>
+                            <form #nameForm="ngForm" novalidate (ngSubmit)="saveNameForm(formModel)">
+                                <div class="form-group">
+                                    <label for="inputName">Name <span class="text-danger">*</span></label>
+                                    <input  type="text" id="inputName" name="lotCode" class="form-control" [(ngModel)]="formModel.userName" #lotCode="ngModel" aria-describedby="nameHelp" autocomplete="new-password" required placeholder="Enter your username" [ngClass]="{'is-invalid': lotCode.invalid && submitted}">
+                                    <small id="nameHelp" class="text-danger" *ngIf="lotCode.invalid && submitted">Username is required</small>
+                                </div>     
+                                <div class="form-group">
+                                    <label for="inputDescription">Password <span class="text-danger">*</span></label>
+                                    <input type="password" id="inputDescription" name="desCode" class="form-control" [(ngModel)]="formModel.password" #desCode="ngModel" aria-describedby="descriptionHelp" placeholder="Enter your password" autocomplete="new-password" required [ngClass]="{'is-invalid': desCode.invalid && submitted}">
+                                    <small id="descriptionHelp" class="text-danger" *ngIf="desCode.invalid && submitted">Password is required</small>
+                                </div>
+                                <!-- Stylish Bootstrap Button -->
+                                <button class="btn btn-danger btn-round btn-block" type="submit">Login</button>
+                            </form>
+                            <div class="forgot-password text-center">
+                                <a href="#" class="forgot-password-link">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

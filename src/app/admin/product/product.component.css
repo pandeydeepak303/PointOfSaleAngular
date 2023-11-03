@@ -1,0 +1,107 @@
+.Form{
+    text-align: center;
+    display: flex;
+}
+body {
+    font-family: Arial, sans-serif;
+    width: 80%;
+}
+
+app-header {
+    background-color:#bd2130;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Sidebar styling */
+app-sidebaar {
+    background-color:darkcyan;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Form styling */
+.container {
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group-text {
+    background-color:#333;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Table styling */
+.table {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table th {
+    background-color:peru;
+    color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color:slategray;
+}
+
+/* Buttons styling */
+.btn {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color:darkslategray;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Footer styling */
+app-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.table-container {
+    max-height: 300px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+  }
+.TblDiv{
+
+    width: 80%;
+
+    margin-left: 19%;
+}
+ 
+
+
+

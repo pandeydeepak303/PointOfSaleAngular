@@ -1,0 +1,42 @@
+<app-header></app-header>
+<app-sidebaar></app-sidebaar>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">      
+          <form>
+            <div class="form-group">
+              <label for="AddCategory">Add Category Name:</label>
+              <input type="text" id="AddCategory" class="form-control" name="AddCategory"  [(ngModel)]="Data.productName" >
+            </div>
+            <button   type="submit" (click)="submitcategories()" class="btn btn-primary btn-block">Add</button>
+          </form>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<!-- Categories Table -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2>Categories</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Category Name</th>
+             <!-- Add more table headers as needed -->
+          </tr>
+        </thead>
+         <tbody>
+           <tr *ngFor="let category of TbData">
+            <td>{{ category.productName }}</td>
+           </tr> 
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> 
+<app-footer></app-footer>
